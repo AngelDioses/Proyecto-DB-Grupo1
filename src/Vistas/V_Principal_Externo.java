@@ -29,12 +29,24 @@ public class V_Principal_Externo extends javax.swing.JFrame {
     private int xMouse,yMouse;
     public Animator animator;
     public MigLayout layout;
+    private V_Principal principal;
+    
     
     public V_Principal_Externo() {
+        
         initComponents();
         setBackground(new Color(0, 0, 0, 0));
         setLocationRelativeTo(null);
         init();
+    }
+
+    public V_Principal_Externo(V_Principal aThis) {
+        this.principal = aThis;
+        initComponents();
+        setBackground(new Color(0, 0, 0, 0));
+        setLocationRelativeTo(null);
+        init();// Método para inicializar componentes gráficos
+        // Otros pasos de inicialización si son necesarios
     }
     
     public void init(){
@@ -159,6 +171,7 @@ public class V_Principal_Externo extends javax.swing.JFrame {
         mainBody = new Modelo.Design.MainBody();
         panelBackground2 = new Modelo.Design.PanelBackground();
         header = new Modelo.Design.Headboard();
+        jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         rSLabelHora1 = new rojeru_san.RSLabelHora();
         button1 = new Modelo.Design.Button();
@@ -187,19 +200,32 @@ public class V_Principal_Externo extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Aquí puede acceder al Presupuesto Interno");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelBackground2Layout = new javax.swing.GroupLayout(panelBackground2);
         panelBackground2.setLayout(panelBackground2Layout);
         panelBackground2Layout.setHorizontalGroup(
             panelBackground2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBackground2Layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(header, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(373, 373, 373)
+                .addComponent(jButton1)
+                .addGap(98, 98, 98)
+                .addComponent(header, javax.swing.GroupLayout.DEFAULT_SIZE, 533, Short.MAX_VALUE))
         );
         panelBackground2Layout.setVerticalGroup(
             panelBackground2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBackground2Layout.createSequentialGroup()
                 .addComponent(header, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 100, Short.MAX_VALUE))
+            .addGroup(panelBackground2Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.setBackground(new java.awt.Color(54, 87, 185));
@@ -301,45 +327,19 @@ public class V_Principal_Externo extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_button1ActionPerformed
 
-//    /**
-//     * @param args the command line arguments
-//     */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(V_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(V_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(V_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(V_Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new V_Principal().setVisible(true);
-//            }
-//        });
-//    }
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        V_Principal vPrincipal = new V_Principal();
+        vPrincipal.setVisible(true);
+        this.dispose(); // Cierra la ventana actual (V_Principal_Externo)
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private Modelo.Design.Button btn;
     private Modelo.Design.Button button1;
     private Modelo.Design.Headboard header;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     public Modelo.Design.MainBody mainBody;
     private Modelo.Menu.Menu menu;

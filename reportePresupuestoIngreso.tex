@@ -1,0 +1,33 @@
+\documentclass[a4paper, landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{geometry}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{center}
+\vspace{0.5cm}
+\textbf{\Huge Devenco}\\ % Nombre de la empresa
+\vspace{0.2cm}
+\textbf{\Large RUC: 52185059242}\\ % RUC
+\vspace{1cm}
+\textbf{\Large Reporte de Presupuesto (Ingreso)}
+\end{center}
+\vspace{1cm}
+\begin{center}
+\begin{longtable}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+CodPyto & NroVersion & CodPartida & eDesembolso & NroPago & eCompPago & ImpDesemNeto & ImpDesemIgv & ImpDesemTotal & Semilla \\
+\hline
+\endfirsthead
+\hline
+CodPyto & NroVersion & CodPartida & eDesembolso & NroPago & eCompPago & ImpDesemNeto & ImpDesemIgv & ImpDesemTotal & Semilla \\
+\hline
+\endhead
+1 & 1 & 5 & Pago & 1 & Factura & 100000.0 & 100.0 & 100100.0 & 1 \\
+1 & 1 & 5 & Pago & 2 & Factura & 20000.0 & 200.0 & 20200.0 & 1 \\
+1 & 1 & 7 & Pago & 3 & Factura & 3000.0 & 300.0 & 3300.0 & 2 \\
+\hline
+\end{longtable}
+\end{center}
+\end{document}
